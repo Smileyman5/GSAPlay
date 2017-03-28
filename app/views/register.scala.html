@@ -1,0 +1,18 @@
+@(message : String)
+
+@main("GSA Register") {
+
+    <h1>Welcome to Generic Social App!</h1>
+    <form method="POST" action="@routes.RegisterController.displayPage">
+    <fieldset>
+        <legend>Register</legend>
+        <p style="color: red; margin: 0">@message</p>
+          Username: <input type="text" name="username"><br>
+          Password: <input type="password" name="password"><br>
+          Re-type Password: <input type="password" name="re_password"><br>
+    </fieldset>
+    <input type="submit" value="Register">
+        <input type="submit" value="Sign In" onclick="form.method='GET';form.action='@routes.LoginController.displayPage';" />
+    </form>
+    <p>Already have friends here? Search <a href="@routes.SearchController.displayPage">here</a>.</p>
+}

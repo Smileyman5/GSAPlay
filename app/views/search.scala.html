@@ -1,0 +1,11 @@
+@(message : Html)
+
+@main("GSA Search") {
+    <h1>Search Page</h1>
+    @helper.form(action = routes.SearchController.displayPage) {
+      Search for a name: <input type="text" name="name"><br>
+      <input type="submit" value="Search">
+    }
+    <p>Still need to register? Go <a href="@routes.RegisterController.register">here</a>.</p>
+    @message
+}
